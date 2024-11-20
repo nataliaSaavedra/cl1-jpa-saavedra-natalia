@@ -8,7 +8,6 @@ import java.util.List;
 @Table(name = "country")
 public class Country {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Code")
     private String code;
     @Column(name = "Name")

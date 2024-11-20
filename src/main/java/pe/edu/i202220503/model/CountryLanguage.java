@@ -11,10 +11,10 @@ public class CountryLanguage {
     private CountryLanguageId id;
 
     @ManyToOne
-    @JoinColumn(name = "CountryCode")
+    @JoinColumn(name = "CountryCode", updatable = false, insertable = false)
     private Country country;
     @Column(name = "IsOfficial")
-    private Boolean isOfficial;
+    private String isOfficial;
     @Column(name = "Percentage")
     private Double percentage;
 
@@ -26,11 +26,11 @@ public class CountryLanguage {
         this.percentage = percentage;
     }
 
-    public Boolean getOfficial() {
+    public String getOfficial() {
         return isOfficial;
     }
 
-    public void setOfficial(Boolean official) {
+    public void setOfficial(String official) {
         isOfficial = official;
     }
 

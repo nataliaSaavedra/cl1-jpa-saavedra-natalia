@@ -10,7 +10,7 @@ public class CountryLanguage {
     @EmbeddedId
     private CountryLanguageId id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "CountryCode", updatable = false, insertable = false)
     private Country country;
     @Column(name = "IsOfficial")

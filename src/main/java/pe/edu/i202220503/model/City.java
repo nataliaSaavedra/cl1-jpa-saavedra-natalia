@@ -15,7 +15,7 @@ public class City {
     private String district;
     @Column(name = "Population")
     private Integer population;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "CountryCode")
     private Country country;
 
